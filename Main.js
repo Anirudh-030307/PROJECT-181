@@ -56,23 +56,6 @@ export default class Main extends Component {
           />
           <Text style={styles.appName}>Look Me....</Text>
         </View>
-        <View style={styles.middleContainer}>
-          <Camera
-            style={{ flex: 1 }}
-            type={Camera.Constants.Type.front}
-            faceDetectorSettings={{
-              mode: FaceDetector.Constants.Mode.fast,
-              detectLandmarks: FaceDetector.Constants.Landmarks.all,
-              runClassifications: FaceDetector.Constants.Classifications.all
-            }}
-            onFacesDetected={this.onFacesDetected}
-            onFacesDetectionError={this.onFacesDetectionError}
-          />
-        </View>
-        <View style={styles.lowerContainer}>
-          <View style={styles.lowerTopContainer}></View>
-          <View style={styles.lowerBottomContainer}></View>
-        </View>
       </View>
     );
   }
@@ -101,20 +84,4 @@ const styles = StyleSheet.create({
   appName: {
     fontSize: 25
   },
-  middleContainer: { flex: 0.67 },
-  lowerContainer: {
-    flex: 0.2,
-    backgroundColor: "#E7F2F8"
-  },
-  lowerTopContainer: {
-    flex: 0.3,
-    justifyContent: "center",
-    alignItems: "center"
-  },
-  lowerBottomContainer: {
-    flex: 0.7,
-    justifyContent: "center",
-    alignItems: "center",
-    backgroundColor: "#EFE7BC"
-  }
 });
